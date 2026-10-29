@@ -1,0 +1,16 @@
+site_name: Веб-программирование. Шайхиев Эльдар. K3339
+
+theme:
+  name: material
+  language: ru
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Главная: index.md
+  - ЛР1:
+      - Отчёт: lab1/report.md
