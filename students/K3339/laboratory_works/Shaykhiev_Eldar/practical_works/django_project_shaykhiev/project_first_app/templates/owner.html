@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}{{ owner }}{% endblock %}
+{% block content %}
+<h1>{{ owner.last_name }} {{ owner.first_name }}</h1>
+<p>Дата рождения: {{ owner.birth_date|default:'-' }}</p>
+<p>Номер паспорта: {{ owner.passport_number|default:'-' }}</p>
+<p>Домашний адрес: {{ owner.home_address|default:'-' }}</p>
+<p>Национальность: {{ owner.nationality|default:'-' }}</p>
+
+<h2>Водительские удостоверения</h2>
+<ul>
+    {% for license in owner.licenses.all %}
+        <li>{{ license.number }}, категория {{ license.type }}, выдано {{ license.issue_date }}</li>
+    {% empty %}
+        <li>нет</li>
+    {% endfor %}
+</ul>
+
+<h2>Автомобили</h2>
+<table>
+    <tr><th>Автомобиль</th><th>Начало владения</th><th>Окончание</th></tr>
+    {% for ownership in owner.ownerships.all %}
+        <tr>
+            <td><a href="{% url 'car_detail' ownership.car.pk %}">{{ ownership.car }}</a></td>
+            <td>{{ ownership.start_date }}</td>
+            <td>{{ ownership.end_date|default:'по сей день' }}</td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="3">нет</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

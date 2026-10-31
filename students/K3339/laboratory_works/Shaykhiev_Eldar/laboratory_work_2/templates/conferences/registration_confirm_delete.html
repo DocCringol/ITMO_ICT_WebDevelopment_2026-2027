@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Отмена регистрации{% endblock %}
+{% block content %}
+<div class="card card-body col-lg-7 mx-auto">
+    <h4>Отменить регистрацию?</h4>
+    <p>Доклад «{{ object.talk_title }}» на конференции «{{ object.conference }}» будет удалён.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Да, отменить</button>
+        <a class="btn btn-link" href="{% url 'my_registrations' %}">Назад</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Мои выступления{% endblock %}
+{% block content %}
+<h1 class="mb-4">Мои выступления</h1>
+<table class="table table-striped bg-white">
+    <thead>
+        <tr><th>Конференция</th><th>Даты</th><th>Секция</th><th>Доклад</th><th>Результат</th><th></th></tr>
+    </thead>
+    <tbody>
+        {% for registration in object_list %}
+            <tr>
+                <td><a href="{% url 'conference_detail' registration.conference.pk %}">{{ registration.conference }}</a></td>
+                <td>{{ registration.conference.start_date|date:'d.m.Y' }} – {{ registration.conference.end_date|date:'d.m.Y' }}</td>
+                <td>{{ registration.topic|default:'-' }}</td>
+                <td>{{ registration.talk_title }}</td>
+                <td>{% include 'conferences/result_badge.html' %}</td>
+                <td class="text-nowrap">
+                    <a class="btn btn-sm btn-outline-primary" href="{% url 'registration_update' registration.pk %}">Изменить</a>
+                    <a class="btn btn-sm btn-outline-danger" href="{% url 'registration_delete' registration.pk %}">Удалить</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="6" class="text-muted">Вы ещё не зарегистрированы ни на одно выступление.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

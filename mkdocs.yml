@@ -1,0 +1,26 @@
+site_name: Веб-программирование. Шайхиев Эльдар. K3339
+
+theme:
+  name: material
+  language: ru
+
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.snippets:
+      base_path: ['.']
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Главная: index.md
+  - ЛР2:
+      - Отчёт: lab2/report.md
+  - Практики:
+      - "2.1–2.3. Django, автовладельцы": practices/pr2.md
