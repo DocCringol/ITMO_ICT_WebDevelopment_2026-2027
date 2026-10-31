@@ -1,0 +1,2105 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lab1/report/">
+      
+      
+        <link rel="next" href="../../practices/pr2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Отчёт - Веб-программирование. Шайхиев Эльдар. K3339</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-django" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Веб-программирование. Шайхиев Эльдар. K3339" class="md-header__button md-logo" aria-label="Веб-программирование. Шайхиев Эльдар. K3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Веб-программирование. Шайхиев Эльдар. K3339
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Отчёт
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Веб-программирование. Шайхиев Эльдар. K3339" class="md-nav__button md-logo" aria-label="Веб-программирование. Шайхиев Эльдар. K3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Веб-программирование. Шайхиев Эльдар. K3339
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛР1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛР2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модель данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        База данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маршруты
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключевые представления
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ключевые представления">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список конференций: поиск, фильтрация, пагинация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация на выступление, изменение и удаление своей заявки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отзывы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблица участников по конференциям
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разграничение прав администратора и пользователя
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разграничение прав администратора и пользователя">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерфейсы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Интерфейсы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список конференций
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Страница конференции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация на выступление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мои выступления: изменение и удаление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблица участников по конференциям
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#django-admin_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practices/pr2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1–2.3. Django, автовладельцы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модель данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        База данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маршруты
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключевые представления
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ключевые представления">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список конференций: поиск, фильтрация, пагинация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация на выступление, изменение и удаление своей заявки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отзывы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблица участников по конференциям
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разграничение прав администратора и пользователя
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разграничение прав администратора и пользователя">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерфейсы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Интерфейсы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список конференций
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Страница конференции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация на выступление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мои выступления: изменение и удаление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблица участников по конференциям
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#django-admin_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-django">Лабораторная работа 2. Простой сайт на Django</h1>
+<p>Выполнил: Шайхиев Эльдар Ильхамович, группа K3339.</p>
+<p><strong>Цель работы:</strong> овладеть практическими навыками и умениями реализации веб-сервисов средствами
+Django.</p>
+<p><strong>Вариант 5 - список научных конференций</strong> (номер в журнале 35, вариантов шесть: 35 → 5).</p>
+<blockquote>
+<p>Интерфейс описывает названия конференций, список тематик, место проведения, период проведения,
+описание конференций, описание места проведения, условия участия.</p>
+<ul>
+<li>Регистрация новых пользователей.</li>
+<li>Просмотр конференций и регистрация авторов для выступлений. Пользователь должен иметь
+  возможность редактирования и удаления своих регистраций.</li>
+<li>Написание отзывов к конференциям. При добавлении комментариев должны сохраняться даты
+  конференции, текст комментария, рейтинг (1–10), информация о комментаторе.</li>
+<li>Администратор должен иметь возможность указания результатов выступления (рекомендован к
+  публикации или нет) средствами Django-admin.</li>
+<li>В клиентской части должна формироваться таблица, отображающая всех участников по конференциям.</li>
+</ul>
+</blockquote>
+<p>Стек: Python 3.13, Django 5.2, PostgreSQL 16, Bootstrap 5.3 (подключён с CDN). Код лежит в
+<code>students/K3339/laboratory_works/Shaykhiev_Eldar/laboratory_work_2/</code>:</p>
+<div class="highlight"><pre><span></span><code>laboratory_work_2/
+  conferences_project/   настройки, корневой urls.py
+  conferences/           приложение: models, views, forms, admin, urls, fixtures/demo.json
+  templates/             base.html, страницы конференций, вход и регистрация
+  docker-compose.yml     PostgreSQL в контейнере
+  requirements.txt, README.md
+</code></pre></div>
+<h2 id="_1">Модель данных</h2>
+<pre class="mermaid"><code>erDiagram
+    User ||--o{ Registration : "регистрирует"
+    User ||--o{ Review : "пишет"
+    Conference ||--o{ Registration : "выступления"
+    Conference ||--o{ Review : "отзывы"
+    Conference }o--o{ Topic : "тематики"
+    Place ||--o{ Conference : "проводится в"
+    Topic |o--o{ Registration : "секция"
+
+    User {
+        string username
+        string first_name
+        string last_name
+        string email
+        string organization
+        string academic_degree
+        bool is_staff
+    }
+    Topic {
+        string name
+    }
+    Place {
+        string name
+        string city
+        string address
+        text description
+    }
+    Conference {
+        string title
+        date start_date
+        date end_date
+        text description
+        text participation_terms
+    }
+    Registration {
+        string talk_title
+        text abstract
+        datetime created_at
+        string result
+    }
+    Review {
+        date conference_start
+        date conference_end
+        text text
+        int rating
+        datetime created_at
+    }</code></pre>
+<table>
+<thead>
+<tr>
+<th>Модель</th>
+<th>Назначение</th>
+<th>Связи</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>User</code></td>
+<td>пользователь сайта (автор доклада, комментатор), расширен через <code>AbstractUser</code>: организация и учёная степень</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>Topic</code></td>
+<td>тематика</td>
+<td>М:М с <code>Conference</code></td>
+</tr>
+<tr>
+<td><code>Place</code></td>
+<td>место проведения: название, город, адрес, описание места</td>
+<td>1:М с <code>Conference</code> (<code>PROTECT</code>)</td>
+</tr>
+<tr>
+<td><code>Conference</code></td>
+<td>название, тематики, место, период (<code>start_date</code>, <code>end_date</code>), описание, условия участия</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>Registration</code></td>
+<td>регистрация автора на выступление: тема доклада, аннотация, секция, результат</td>
+<td>FK на <code>User</code>, <code>Conference</code>, <code>Topic</code></td>
+</tr>
+<tr>
+<td><code>Review</code></td>
+<td>отзыв: даты конференции, текст, рейтинг 1–10, комментатор</td>
+<td>FK на <code>Conference</code>, <code>User</code></td>
+</tr>
+</tbody>
+</table>
+<p>Решения, которые стоит пояснить:</p>
+<ul>
+<li><strong>Пользователь расширен через <code>AbstractUser</code></strong>, как рекомендуют в практике 2.3: организация и
+  учёная степень нужны в таблице участников, а аутентификация стандартная.
+  <code>AUTH_USER_MODEL = 'conferences.User'</code> задан до первой миграции.</li>
+<li><strong>Место проведения вынесено в отдельную модель.</strong> Вариант требует хранить «описание места
+  проведения». В одной площадке проходят разные конференции, и описание не дублируется.</li>
+<li><strong>Результат выступления</strong> - поле <code>result</code> с <code>choices</code>: «Не рассмотрено» (по умолчанию),
+  «Рекомендован к публикации», «Не рекомендован». Ставит его только администратор.</li>
+<li><strong>Одна регистрация автора на конференцию</strong> - <code>UniqueConstraint(author, conference)</code>. При
+  повторной попытке сайт открывает редактирование уже существующей заявки.</li>
+<li><strong>Даты конференции в отзыве</strong> (<code>conference_start</code>, <code>conference_end</code>) копируются из
+  конференции в момент отзыва: так они «сохраняются», как требует вариант, и отзыв остаётся
+  привязанным к тем датам, даже если конференцию потом перенесут.</li>
+<li><strong>Рейтинг</strong> - <code>PositiveSmallIntegerField</code> с <code>MinValueValidator(1)</code> и <code>MaxValueValidator(10)</code>.</li>
+</ul>
+<div class="highlight"><span class="filename">conferences/models.py (фрагмент)</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Registration</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Регистрация автора на выступление; результат ставит администратор</span>
+    <span class="n">RESULT_PENDING</span> <span class="o">=</span> <span class="s1">'pending'</span>
+    <span class="n">RESULT_RECOMMENDED</span> <span class="o">=</span> <span class="s1">'recommended'</span>
+    <span class="n">RESULT_REJECTED</span> <span class="o">=</span> <span class="s1">'rejected'</span>
+    <span class="n">RESULTS</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">RESULT_PENDING</span><span class="p">,</span> <span class="s1">'Не рассмотрено'</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">RESULT_RECOMMENDED</span><span class="p">,</span> <span class="s1">'Рекомендован к публикации'</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">RESULT_REJECTED</span><span class="p">,</span> <span class="s1">'Не рекомендован'</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                               <span class="n">related_name</span><span class="o">=</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Автор'</span><span class="p">)</span>
+    <span class="n">conference</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                                   <span class="n">related_name</span><span class="o">=</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Конференция'</span><span class="p">)</span>
+    <span class="o">...</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Результат выступления'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">RESULTS</span><span class="p">,</span>
+                              <span class="n">default</span><span class="o">=</span><span class="n">RESULT_PENDING</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="c1"># Один автор - одна регистрация на конференцию</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">UniqueConstraint</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'author'</span><span class="p">,</span> <span class="s1">'conference'</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">'unique_author_conference'</span><span class="p">),</span>
+        <span class="p">]</span>
+</code></pre></div>
+<details class="info">
+<summary>Полный листинг models.py</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">django.conf</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">AbstractUser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.core.validators</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaxValueValidator</span><span class="p">,</span> <span class="n">MinValueValidator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
+
+<span class="c1"># Шкала рейтинга отзыва: валидаторы, форма и тексты берут границы отсюда</span>
+<span class="n">RATING_MIN</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">RATING_MAX</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
+    <span class="c1"># Участник конференций - автор доклада или комментатор</span>
+    <span class="n">organization</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Организация'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">academic_degree</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Учёная степень'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_full_name</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Topic</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Название'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'Тематика'</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Тематики'</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Place</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Название'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">city</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Город'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Адрес'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">'Описание места проведения'</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'Место проведения'</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Места проведения'</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'city'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">city</span><span class="si">}</span><span class="s1">)'</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Conference</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Название'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">topics</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topic</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">'conferences'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Тематики'</span><span class="p">)</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">PROTECT</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">'conferences'</span><span class="p">,</span>
+                              <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Место проведения'</span><span class="p">)</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="s1">'Дата начала'</span><span class="p">)</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="s1">'Дата окончания'</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">'Описание'</span><span class="p">)</span>
+    <span class="n">participation_terms</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">'Условия участия'</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'Конференция'</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Конференции'</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'start_date'</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Registration</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Регистрация автора на выступление; результат ставит администратор</span>
+    <span class="n">RESULT_PENDING</span> <span class="o">=</span> <span class="s1">'pending'</span>
+    <span class="n">RESULT_RECOMMENDED</span> <span class="o">=</span> <span class="s1">'recommended'</span>
+    <span class="n">RESULT_REJECTED</span> <span class="o">=</span> <span class="s1">'rejected'</span>
+    <span class="n">RESULTS</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">RESULT_PENDING</span><span class="p">,</span> <span class="s1">'Не рассмотрено'</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">RESULT_RECOMMENDED</span><span class="p">,</span> <span class="s1">'Рекомендован к публикации'</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">RESULT_REJECTED</span><span class="p">,</span> <span class="s1">'Не рекомендован'</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                               <span class="n">related_name</span><span class="o">=</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Автор'</span><span class="p">)</span>
+    <span class="n">conference</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                                   <span class="n">related_name</span><span class="o">=</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Конференция'</span><span class="p">)</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Topic</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">SET_NULL</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                              <span class="n">related_name</span><span class="o">=</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Секция'</span><span class="p">)</span>
+    <span class="n">talk_title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Тема доклада'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">abstract</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">'Аннотация'</span><span class="p">)</span>
+    <span class="n">created_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">'Дата регистрации'</span><span class="p">,</span> <span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">'Результат выступления'</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">RESULTS</span><span class="p">,</span>
+                              <span class="n">default</span><span class="o">=</span><span class="n">RESULT_PENDING</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'Регистрация на выступление'</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Регистрации на выступления'</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'conference__start_date'</span><span class="p">,</span> <span class="s1">'author__last_name'</span><span class="p">]</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="c1"># Один автор - одна регистрация на конференцию</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">UniqueConstraint</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'author'</span><span class="p">,</span> <span class="s1">'conference'</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">'unique_author_conference'</span><span class="p">),</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">talk_title</span><span class="si">}</span><span class="s1">'</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Review</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">conference</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                                   <span class="n">related_name</span><span class="o">=</span><span class="s1">'reviews'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Конференция'</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+                               <span class="n">related_name</span><span class="o">=</span><span class="s1">'reviews'</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">'Комментатор'</span><span class="p">)</span>
+    <span class="c1"># Даты конференции на момент отзыва: если её потом перенесут, отзыв останется о тех датах</span>
+    <span class="n">conference_start</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="s1">'Начало конференции'</span><span class="p">)</span>
+    <span class="n">conference_end</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="s1">'Окончание конференции'</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s1">'Текст отзыва'</span><span class="p">)</span>
+    <span class="n">rating</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">PositiveSmallIntegerField</span><span class="p">(</span>
+        <span class="s1">'Рейтинг'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">MinValueValidator</span><span class="p">(</span><span class="n">RATING_MIN</span><span class="p">),</span> <span class="n">MaxValueValidator</span><span class="p">(</span><span class="n">RATING_MAX</span><span class="p">)])</span>
+    <span class="n">created_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">'Дата отзыва'</span><span class="p">,</span> <span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'Отзыв'</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Отзывы'</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'-created_at'</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s1"> о «</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">conference</span><span class="si">}</span><span class="s1">»: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rating</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">RATING_MAX</span><span class="si">}</span><span class="s1">'</span>
+</code></pre></div>
+</details>
+<h3 id="_2">База данных</h3>
+<p>Используется PostgreSQL. Параметры подключения читаются из переменных окружения, чтобы не
+хранить пароль в коде:</p>
+<div class="highlight"><span class="filename">conferences_project/settings.py</span><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'ENGINE'</span><span class="p">:</span> <span class="s1">'django.db.backends.postgresql'</span><span class="p">,</span>
+        <span class="s1">'NAME'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DB_NAME'</span><span class="p">,</span> <span class="s1">'conferences'</span><span class="p">),</span>
+        <span class="s1">'USER'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DB_USER'</span><span class="p">,</span> <span class="s1">'postgres'</span><span class="p">),</span>
+        <span class="s1">'PASSWORD'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DB_PASSWORD'</span><span class="p">,</span> <span class="s1">'postgres'</span><span class="p">),</span>
+        <span class="s1">'HOST'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DB_HOST'</span><span class="p">,</span> <span class="s1">'localhost'</span><span class="p">),</span>
+        <span class="s1">'PORT'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DB_PORT'</span><span class="p">,</span> <span class="s1">'5432'</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Демонстрационные данные лежат в фикстуре <code>conferences/fixtures/demo.json</code> и загружаются командой
+<code>python manage.py loaddata demo</code>: шесть тематик, пять мест проведения, семь конференций, шесть
+пользователей (администратор <code>admin</code> с паролем <code>admin</code> и пять участников с паролем <code>Conf-pass-2026</code>), одиннадцать
+регистраций на выступления во всех трёх статусах и семь отзывов о прошедших конференциях.</p>
+<h2 id="_3">Маршруты</h2>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Представление</th>
+<th>Кто может</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td><code>ConferenceListView</code></td>
+<td>все</td>
+<td>список конференций: поиск, фильтры, пагинация</td>
+</tr>
+<tr>
+<td><code>/conference/&lt;id&gt;/</code></td>
+<td><code>ConferenceDetailView</code></td>
+<td>все</td>
+<td>описание, место проведения, условия, отзывы</td>
+</tr>
+<tr>
+<td><code>/conference/&lt;id&gt;/register/</code></td>
+<td><code>RegistrationCreateView</code></td>
+<td>вошедший</td>
+<td>регистрация на выступление</td>
+</tr>
+<tr>
+<td><code>/conference/&lt;id&gt;/review/</code></td>
+<td><code>add_review</code> (POST)</td>
+<td>вошедший</td>
+<td>добавить отзыв</td>
+</tr>
+<tr>
+<td><code>/review/&lt;id&gt;/delete/</code></td>
+<td><code>delete_review</code> (POST)</td>
+<td>администратор</td>
+<td>удалить отзыв</td>
+</tr>
+<tr>
+<td><code>/registrations/</code></td>
+<td><code>MyRegistrationsView</code></td>
+<td>вошедший</td>
+<td>мои выступления и их результат</td>
+</tr>
+<tr>
+<td><code>/registration/&lt;id&gt;/edit/</code></td>
+<td><code>RegistrationUpdateView</code></td>
+<td>автор заявки</td>
+<td>изменить свою заявку</td>
+</tr>
+<tr>
+<td><code>/registration/&lt;id&gt;/delete/</code></td>
+<td><code>RegistrationDeleteView</code></td>
+<td>автор заявки</td>
+<td>удалить свою заявку</td>
+</tr>
+<tr>
+<td><code>/registration/&lt;id&gt;/result/</code></td>
+<td><code>set_result</code> (POST)</td>
+<td>администратор</td>
+<td>поставить результат выступления</td>
+</tr>
+<tr>
+<td><code>/participants/</code></td>
+<td><code>ParticipantsView</code></td>
+<td>все</td>
+<td>таблица участников по конференциям</td>
+</tr>
+<tr>
+<td><code>/signup/</code></td>
+<td><code>signup</code></td>
+<td>все</td>
+<td>регистрация пользователя</td>
+</tr>
+<tr>
+<td><code>/accounts/login/</code>, <code>/accounts/logout/</code></td>
+<td><code>django.contrib.auth</code></td>
+<td>все</td>
+<td>вход и выход</td>
+</tr>
+<tr>
+<td><code>/admin/</code></td>
+<td>Django-admin</td>
+<td>администратор</td>
+<td>управление всеми данными</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">Ключевые представления</h2>
+<h3 id="_5">Список конференций: поиск, фильтрация, пагинация</h3>
+<p><code>ListView</code> с <code>paginate_by = 4</code>. Сколько конференций показывать на странице, пользователь выбирает
+сам (по 2, 4 или 8, параметр <code>per_page</code>): <code>get_paginate_by</code> берёт значение из адреса, если оно из
+списка, иначе остаётся 4. Фильтры берутся из GET-параметров и накладываются на queryset до
+пагинации, поэтому <code>Paginator</code> делит на страницы уже отфильтрованный список.
+<code>annotate(participants=Count('registrations'))</code> считает докладчиков одним SQL-запросом, без
+отдельного запроса на каждую карточку.</p>
+<div class="highlight"><span class="filename">conferences/views.py</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ConferenceListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Conference</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/conference_list.html'</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="c1"># Варианты для выбора «сколько на странице»; другое значение в адресе даёт paginate_by</span>
+    <span class="n">per_page_choices</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+    <span class="c1"># Сколько конференций на странице: ListView вызывает его перед тем, как делить на страницы</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_paginate_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="n">per_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'per_page'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">per_page</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_page</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">per_page_choices</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_page</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginate_by</span>
+
+    <span class="c1"># Какие конференции показать: здесь только строится запрос с поиском и фильтрами из адреса</span>
+    <span class="c1"># (?q=, ?topic= ...). QuerySet ленивый, ListView дописывает к нему LIMIT/OFFSET текущей</span>
+    <span class="c1"># страницы, и из базы приходят только её конференции - в шаблон как page_obj</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="p">(</span><span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'place'</span><span class="p">)</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s1">'topics'</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">participants</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">'registrations'</span><span class="p">))</span>
+                    <span class="c1"># С annotate Meta.ordering не применяется, без порядка пагинация нестабильна</span>
+                    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">'start_date'</span><span class="p">))</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span>
+
+        <span class="c1"># Поиск по названию и описанию</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">title__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">description__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">))</span>
+        <span class="c1"># Фильтры: тематика, город, прошедшие или предстоящие</span>
+        <span class="c1"># Нечисловой id (набран руками в адресе) не фильтрует, иначе ORM падает с ValueError</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'topic'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">topics__id</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">'topic'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'city'</span><span class="p">):</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">place__city</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">'city'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'period'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'upcoming'</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">end_date__gte</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'period'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'past'</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">end_date__lt</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">queryset</span>
+</code></pre></div>
+<p>Чтобы при переходе на другую страницу не терялись фильтры, ссылки пагинации строятся тегом
+<code>{% querystring %}</code> (появился в Django 5.1): он берёт текущие GET-параметры (в том числе <code>per_page</code>) и
+заменяет только <code>page</code>.</p>
+<div class="highlight"><span class="filename">templates/conferences/conference_list.html (фрагмент)</span><pre><span></span><code><span class="cp">{%</span> <span class="k">for</span> <span class="nv">number</span> <span class="k">in</span> <span class="nv">page_obj.paginator.page_range</span> <span class="cp">%}</span>
+<span class="x">    &lt;li class="page-item</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">number</span> <span class="o">==</span> <span class="nv">page_obj.number</span> <span class="cp">%}</span><span class="x"> active</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">"&gt;</span>
+<span class="x">        &lt;a class="page-link" href="</span><span class="cp">{%</span> <span class="k">querystring</span> <span class="nv">page</span><span class="o">=</span><span class="nv">number</span> <span class="cp">%}</span><span class="x">"&gt;</span><span class="cp">{{</span> <span class="nv">number</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+<span class="x">    &lt;/li&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</code></pre></div>
+<h3 id="_6">Регистрация на выступление, изменение и удаление своей заявки</h3>
+<p>Создание - <code>CreateView</code>. Конференция берётся из URL, автор - из <code>request.user</code>. В форме остаются
+только тема доклада, аннотация и секция, а секции ограничены тематиками этой конференции:</p>
+<div class="highlight"><span class="filename">conferences/forms.py</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RegistrationForm</span><span class="p">(</span><span class="n">BootstrapMixin</span><span class="p">,</span> <span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Registration</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'topic'</span><span class="p">,</span> <span class="s1">'talk_title'</span><span class="p">,</span> <span class="s1">'abstract'</span><span class="p">]</span>
+        <span class="n">widgets</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'abstract'</span><span class="p">:</span> <span class="n">forms</span><span class="o">.</span><span class="n">Textarea</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">'rows'</span><span class="p">:</span> <span class="mi">5</span><span class="p">})}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">conference</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># Секцию можно выбрать только из тематик этой конференции</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">'topic'</span><span class="p">]</span><span class="o">.</span><span class="n">queryset</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">topics</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></div>
+<p>Изменять и удалять можно только свои заявки. Для этого <code>UpdateView</code> и <code>DeleteView</code> берут объект
+из queryset, отфильтрованного по автору: чужая заявка в нём просто не найдётся, и Django ответит
+404. Проверка в шаблоне (спрятать кнопку) защищала бы только интерфейс, а не URL.</p>
+<div class="highlight"><span class="filename">conferences/views.py</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">OwnRegistrationMixin</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">):</span>
+    <span class="c1"># Изменять и удалять можно только свои регистрации: чужая даст 404</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Registration</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'conference'</span><span class="p">)</span>
+
+
+<span class="c1"># Изменение своей заявки: тот же шаблон и форма, что при создании</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationUpdateView</span><span class="p">(</span><span class="n">OwnRegistrationMixin</span><span class="p">,</span> <span class="n">UpdateView</span><span class="p">):</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">RegistrationForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/registration_form.html'</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">'my_registrations'</span><span class="p">)</span>
+    <span class="o">...</span>
+
+
+<span class="c1"># Удаление своей заявки: GET - страница «точно удалить?», POST - удаление</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationDeleteView</span><span class="p">(</span><span class="n">OwnRegistrationMixin</span><span class="p">,</span> <span class="n">DeleteView</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/registration_confirm_delete.html'</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">'my_registrations'</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_7">Отзывы</h3>
+<p>Форма содержит только рейтинг и текст. Конференцию, автора и даты конференции проставляет
+представление:</p>
+<div class="highlight"><span class="filename">conferences/views.py</span><pre><span></span><code><span class="nd">@login_required</span>
+<span class="nd">@require_POST</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_review</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+    <span class="n">conference</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+        <span class="n">review</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference</span> <span class="o">=</span> <span class="n">conference</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference_start</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">start_date</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference_end</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">end_date</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Спасибо за отзыв'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'Отзыв не сохранён: рейтинг от </span><span class="si">{</span><span class="n">RATING_MIN</span><span class="si">}</span><span class="s1"> до </span><span class="si">{</span><span class="n">RATING_MAX</span><span class="si">}</span><span class="s1"> и непустой текст'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'conference_detail'</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_8">Таблица участников по конференциям</h3>
+<p>Для каждой конференции нужен список её регистраций, причём с учётом фильтров (результат, поиск
+по ФИО, организации или теме). <code>Prefetch</code> с отфильтрованным queryset загружает все регистрации
+одним дополнительным запросом и кладёт их в атрибут <code>filtered_registrations</code> каждой конференции.</p>
+<div class="highlight"><span class="filename">conferences/views.py</span><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ParticipantsView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="c1"># Таблица участников, сгруппированная по конференциям</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/participants.html'</span>
+    <span class="n">context_object_name</span> <span class="o">=</span> <span class="s1">'conferences'</span>
+
+    <span class="c1"># Конференции, у каждой в filtered_registrations - её заявки с учётом фильтров</span>
+    <span class="c1"># (результат, поиск по автору и теме). Prefetch грузит заявки всех конференций одним запросом</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">registrations</span> <span class="o">=</span> <span class="n">Registration</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'author'</span><span class="p">,</span> <span class="s1">'topic'</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'result'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">registrations</span> <span class="o">=</span> <span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">registrations</span> <span class="o">=</span> <span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">Q</span><span class="p">(</span><span class="n">author__last_name__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">author__first_name__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span>
+                <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">author__organization__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">talk_title__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">))</span>
+
+        <span class="n">conferences</span> <span class="o">=</span> <span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span>
+            <span class="n">Prefetch</span><span class="p">(</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">queryset</span><span class="o">=</span><span class="n">registrations</span><span class="p">,</span> <span class="n">to_attr</span><span class="o">=</span><span class="s1">'filtered_registrations'</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'conference'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">conferences</span> <span class="o">=</span> <span class="n">conferences</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">conferences</span>
+</code></pre></div>
+<details class="info">
+<summary>Полный листинг views.py</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">messages</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.admin.views.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">staff_member_required</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">login</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">login_required</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.mixins</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoginRequiredMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Avg</span><span class="p">,</span> <span class="n">Count</span><span class="p">,</span> <span class="n">Prefetch</span><span class="p">,</span> <span class="n">Q</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">render</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">reverse</span><span class="p">,</span> <span class="n">reverse_lazy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.utils.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">url_has_allowed_host_and_scheme</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.views.decorators.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">require_POST</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.views.generic</span><span class="w"> </span><span class="kn">import</span> <span class="n">DetailView</span><span class="p">,</span> <span class="n">ListView</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.views.generic.edit</span><span class="w"> </span><span class="kn">import</span> <span class="n">CreateView</span><span class="p">,</span> <span class="n">DeleteView</span><span class="p">,</span> <span class="n">UpdateView</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">RegistrationForm</span><span class="p">,</span> <span class="n">ResultForm</span><span class="p">,</span> <span class="n">ReviewForm</span><span class="p">,</span> <span class="n">SignUpForm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">RATING_MAX</span><span class="p">,</span> <span class="n">RATING_MIN</span><span class="p">,</span> <span class="n">Conference</span><span class="p">,</span> <span class="n">Registration</span><span class="p">,</span> <span class="n">Review</span><span class="p">,</span> <span class="n">Topic</span><span class="p">,</span> <span class="n">Place</span>
+
+
+<span class="c1"># Регистрация на сайте: GET - пустая форма, POST - создать пользователя, сразу войти</span>
+<span class="c1"># и уйти на список конференций. При ошибках форма показывается снова с текстами ошибок</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">signup</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">'POST'</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">SignUpForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">login</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Регистрация прошла успешно'</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'conference_list'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">SignUpForm</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'registration/signup.html'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'form'</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span>
+
+
+<span class="c1"># Главная: список конференций с поиском, фильтрами и страницами</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConferenceListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Conference</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/conference_list.html'</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="c1"># Варианты для выбора «сколько на странице»; другое значение в адресе даёт paginate_by</span>
+    <span class="n">per_page_choices</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+    <span class="c1"># Сколько конференций на странице: ListView вызывает его перед тем, как делить на страницы</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_paginate_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="n">per_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'per_page'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">per_page</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_page</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">per_page_choices</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_page</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginate_by</span>
+
+    <span class="c1"># Какие конференции показать: здесь только строится запрос с поиском и фильтрами из адреса</span>
+    <span class="c1"># (?q=, ?topic= ...). QuerySet ленивый, ListView дописывает к нему LIMIT/OFFSET текущей</span>
+    <span class="c1"># страницы, и из базы приходят только её конференции - в шаблон как page_obj</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="p">(</span><span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'place'</span><span class="p">)</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s1">'topics'</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">participants</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">'registrations'</span><span class="p">))</span>
+                    <span class="c1"># С annotate Meta.ordering не применяется, без порядка пагинация нестабильна</span>
+                    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">'start_date'</span><span class="p">))</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span>
+
+        <span class="c1"># Поиск по названию и описанию</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">title__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">description__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">))</span>
+        <span class="c1"># Фильтры: тематика, город, прошедшие или предстоящие</span>
+        <span class="c1"># Нечисловой id (набран руками в адресе) не фильтрует, иначе ORM падает с ValueError</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'topic'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">topics__id</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">'topic'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'city'</span><span class="p">):</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">place__city</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">'city'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'period'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'upcoming'</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">end_date__gte</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'period'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'past'</span><span class="p">:</span>
+            <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">end_date__lt</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">queryset</span>
+
+    <span class="c1"># Что ещё передать в шаблон, кроме страницы конференций: варианты для выпадающих списков</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'topics'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Topic</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'cities'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Place</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s1">'city'</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">'city'</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'per_page_choices'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">per_page_choices</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+
+<span class="c1"># Страница одной конференции: DetailView сам находит её по pk из адреса, нет такой - 404</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConferenceDetailView</span><span class="p">(</span><span class="n">DetailView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Conference</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/conference_detail.html'</span>
+    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'place'</span><span class="p">)</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s1">'topics'</span><span class="p">)</span>
+
+    <span class="c1"># Кроме самой конференции: отзывы, средний рейтинг, число докладчиков, пустая форма отзыва</span>
+    <span class="c1"># и заявка текущего пользователя, чтобы показать «Изменить» вместо «Зарегистрироваться»</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">conference</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'reviews'</span><span class="p">]</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">reviews</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'author'</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'avg_rating'</span><span class="p">]</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">reviews</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">avg</span><span class="o">=</span><span class="n">Avg</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">))[</span><span class="s1">'avg'</span><span class="p">]</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'rating_max'</span><span class="p">]</span> <span class="o">=</span> <span class="n">RATING_MAX</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'participants_count'</span><span class="p">]</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">registrations</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'review_form'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+            <span class="n">context</span><span class="p">[</span><span class="s1">'my_registration'</span><span class="p">]</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+
+<span class="c1"># Новая заявка на выступление; LoginRequiredMixin отправляет анонима на страницу входа</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationCreateView</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">,</span> <span class="n">CreateView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Registration</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">RegistrationForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/registration_form.html'</span>
+
+    <span class="c1"># Вызывается первым на любой запрос: находим конференцию из адреса, а если заявка</span>
+    <span class="c1"># на неё уже есть - сразу уводим на её редактирование (одна заявка на конференцию)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dispatch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conference</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">'pk'</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+            <span class="n">existing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conference</span><span class="o">.</span><span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">existing</span><span class="p">:</span>
+                <span class="n">messages</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Вы уже зарегистрированы, можно изменить заявку'</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'registration_update'</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">existing</span><span class="o">.</span><span class="n">pk</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="c1"># Аргументы для RegistrationForm: передаём конференцию, чтобы в списке секций были только её тематики</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_form_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_form_kwargs</span><span class="p">()</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conference</span>
+        <span class="k">return</span> <span class="n">kwargs</span>
+
+    <span class="c1"># Конференция нужна шаблону для заголовка «Заявка на ...»</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conference</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+    <span class="c1"># Форма прошла проверку: автора и конференцию ставим сами, в форме их нет, подделать нельзя</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">form_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">):</span>
+        <span class="n">form</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">form</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">conference</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conference</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Вы зарегистрированы на выступление'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">form_valid</span><span class="p">(</span><span class="n">form</span><span class="p">)</span>
+
+    <span class="c1"># Куда уйти после сохранения</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_success_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">'my_registrations'</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">OwnRegistrationMixin</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">):</span>
+    <span class="c1"># Изменять и удалять можно только свои регистрации: чужая даст 404</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Registration</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'conference'</span><span class="p">)</span>
+
+
+<span class="c1"># Изменение своей заявки: тот же шаблон и форма, что при создании</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationUpdateView</span><span class="p">(</span><span class="n">OwnRegistrationMixin</span><span class="p">,</span> <span class="n">UpdateView</span><span class="p">):</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">RegistrationForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/registration_form.html'</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">'my_registrations'</span><span class="p">)</span>
+
+    <span class="c1"># Секции - тематики конференции этой заявки (self.object - заявка, найденная по pk)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_form_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_form_kwargs</span><span class="p">()</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">conference</span>
+        <span class="k">return</span> <span class="n">kwargs</span>
+
+    <span class="c1"># Конференция для заголовка страницы</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">conference</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+    <span class="c1"># Сохранение делает UpdateView, здесь только сообщение пользователю</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">form_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">):</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Заявка обновлена'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">form_valid</span><span class="p">(</span><span class="n">form</span><span class="p">)</span>
+
+
+<span class="c1"># Удаление своей заявки: GET - страница «точно удалить?», POST - удаление</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationDeleteView</span><span class="p">(</span><span class="n">OwnRegistrationMixin</span><span class="p">,</span> <span class="n">DeleteView</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/registration_confirm_delete.html'</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">'my_registrations'</span><span class="p">)</span>
+
+    <span class="c1"># Удаляет DeleteView, здесь только сообщение пользователю</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">form_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">):</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Регистрация удалена'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">form_valid</span><span class="p">(</span><span class="n">form</span><span class="p">)</span>
+
+
+<span class="c1"># «Мои выступления»: заявки текущего пользователя с результатами</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyRegistrationsView</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">,</span> <span class="n">ListView</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/my_registrations.html'</span>
+
+    <span class="c1"># Только свои заявки, по дате конференции</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">Registration</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'conference'</span><span class="p">,</span> <span class="s1">'topic'</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">'conference__start_date'</span><span class="p">))</span>
+
+
+<span class="c1"># Отзыв к конференции: только вошедшим и только POST. Даты конференции копируются в отзыв,</span>
+<span class="c1"># автор и конференция ставятся здесь. После - назад на страницу конференции</span>
+<span class="nd">@login_required</span>
+<span class="nd">@require_POST</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_review</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+    <span class="n">conference</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Conference</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ReviewForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+        <span class="n">review</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference</span> <span class="o">=</span> <span class="n">conference</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference_start</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">start_date</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">conference_end</span> <span class="o">=</span> <span class="n">conference</span><span class="o">.</span><span class="n">end_date</span>
+        <span class="n">review</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Спасибо за отзыв'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'Отзыв не сохранён: рейтинг от </span><span class="si">{</span><span class="n">RATING_MIN</span><span class="si">}</span><span class="s1"> до </span><span class="si">{</span><span class="n">RATING_MAX</span><span class="si">}</span><span class="s1"> и непустой текст'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'conference_detail'</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+
+
+<span class="c1"># Удаление любого отзыва: только администратор (иначе - на вход в админку) и только POST</span>
+<span class="nd">@staff_member_required</span>
+<span class="nd">@require_POST</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">delete_review</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+    <span class="n">review</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Review</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">review</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'Отзыв удалён'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'conference_detail'</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">review</span><span class="o">.</span><span class="n">conference_id</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ParticipantsView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="c1"># Таблица участников, сгруппированная по конференциям</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'conferences/participants.html'</span>
+    <span class="n">context_object_name</span> <span class="o">=</span> <span class="s1">'conferences'</span>
+
+    <span class="c1"># Конференции, у каждой в filtered_registrations - её заявки с учётом фильтров</span>
+    <span class="c1"># (результат, поиск по автору и теме). Prefetch грузит заявки всех конференций одним запросом</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">registrations</span> <span class="o">=</span> <span class="n">Registration</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">'author'</span><span class="p">,</span> <span class="s1">'topic'</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'result'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">registrations</span> <span class="o">=</span> <span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">registrations</span> <span class="o">=</span> <span class="n">registrations</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">Q</span><span class="p">(</span><span class="n">author__last_name__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">author__first_name__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span>
+                <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">author__organization__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">talk_title__icontains</span><span class="o">=</span><span class="n">q</span><span class="p">))</span>
+
+        <span class="n">conferences</span> <span class="o">=</span> <span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span>
+            <span class="n">Prefetch</span><span class="p">(</span><span class="s1">'registrations'</span><span class="p">,</span> <span class="n">queryset</span><span class="o">=</span><span class="n">registrations</span><span class="p">,</span> <span class="n">to_attr</span><span class="o">=</span><span class="s1">'filtered_registrations'</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'conference'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">conferences</span> <span class="o">=</span> <span class="n">conferences</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">[</span><span class="s1">'conference'</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">conferences</span>
+
+    <span class="c1"># Варианты для выпадающих списков фильтров: все конференции и все результаты</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'all_conferences'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Conference</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">'results'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Registration</span><span class="o">.</span><span class="n">RESULTS</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+
+<span class="c1"># Смена результата заявки из таблицы участников: только администратор и только POST.</span>
+<span class="c1"># ResultForm проверяет, что значение одно из трёх</span>
+<span class="nd">@staff_member_required</span>
+<span class="nd">@require_POST</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_result</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+    <span class="n">registration</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Registration</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResultForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">registration</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+        <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'Результат для «</span><span class="si">{</span><span class="n">registration</span><span class="o">.</span><span class="n">talk_title</span><span class="si">}</span><span class="s1">» сохранён'</span><span class="p">)</span>
+    <span class="c1"># Возвращаемся на ту же страницу таблицы (с фильтрами), но только на свой сайт</span>
+    <span class="n">next_url</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'next'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url_has_allowed_host_and_scheme</span><span class="p">(</span><span class="n">next_url</span><span class="p">,</span> <span class="n">allowed_hosts</span><span class="o">=</span><span class="p">{</span><span class="n">request</span><span class="o">.</span><span class="n">get_host</span><span class="p">()}):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">next_url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'participants'</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h2 id="_9">Разграничение прав администратора и пользователя</h2>
+<p>Администратор (<code>is_staff</code>) видит и делает больше прямо на сайте, а не только в Django-admin.
+Главное здесь - последний пункт варианта: результат выступления администратор ставит не только в
+Django-admin (<code>list_editable</code>), но и в таблице участников на сайте (<code>set_result</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Действие</th>
+<th>Аноним</th>
+<th>Пользователь</th>
+<th>Администратор</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Просмотр конференций, отзывов, таблицы участников</td>
+<td>да</td>
+<td>да</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Регистрация на выступление, правка и удаление своих заявок</td>
+<td>нет</td>
+<td>да</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Отзыв к конференции</td>
+<td>нет</td>
+<td>да</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Изменение результата выступления в таблице участников</td>
+<td>нет</td>
+<td>нет</td>
+<td>да</td>
+</tr>
+<tr>
+<td>E-mail участников в таблице</td>
+<td>нет</td>
+<td>нет</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Удаление любого отзыва</td>
+<td>нет</td>
+<td>нет</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Ссылки «Админ-панель», «Редактировать в админке»</td>
+<td>нет</td>
+<td>нет</td>
+<td>да</td>
+</tr>
+</tbody>
+</table>
+<p>В шаблонах это проверка <code>{% if user.is_staff %}</code>:</p>
+<div class="highlight"><span class="filename">templates/conferences/participants.html (фрагмент)</span><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">user.is_staff</span> <span class="cp">%}</span>
+<span class="x">    </span><span class="c">{# Администратор меняет результат прямо в таблице #}</span>
+<span class="x">    &lt;form method="post" action="</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">'registration_result'</span> <span class="nv">registration.pk</span> <span class="cp">%}</span><span class="x">" class="d-flex gap-1"&gt;</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">csrf_token</span> <span class="cp">%}</span>
+<span class="x">        &lt;input type="hidden" name="next" value="</span><span class="cp">{{</span> <span class="nv">request.get_full_path</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">        &lt;select name="result" class="form-select form-select-sm" style="min-width: 15rem"&gt;</span>
+<span class="x">            </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">value</span><span class="o">,</span> <span class="nv">label</span> <span class="k">in</span> <span class="nv">results</span> <span class="cp">%}</span>
+<span class="x">                &lt;option value="</span><span class="cp">{{</span> <span class="nv">value</span> <span class="cp">}}</span><span class="x">"</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">registration.result</span> <span class="o">==</span> <span class="nv">value</span> <span class="cp">%}</span><span class="x"> selected</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&gt;</span><span class="cp">{{</span> <span class="nv">label</span> <span class="cp">}}</span><span class="x">&lt;/option&gt;</span>
+<span class="x">            </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="x">        &lt;/select&gt;</span>
+<span class="x">        &lt;button class="btn btn-sm btn-warning" type="submit"&gt;OK&lt;/button&gt;</span>
+<span class="x">    &lt;/form&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">include</span> <span class="s1">'conferences/result_badge.html'</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</code></pre></div>
+<p>Скрыть форму в шаблоне недостаточно: обработчик тоже закрыт декоратором
+<code>@staff_member_required</code>, поэтому POST от обычного пользователя не пройдёт.</p>
+<div class="highlight"><span class="filename">conferences/views.py</span><pre><span></span><code><span class="nd">@staff_member_required</span>
+<span class="nd">@require_POST</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_result</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+    <span class="n">registration</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Registration</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResultForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">registration</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+        <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'Результат для «</span><span class="si">{</span><span class="n">registration</span><span class="o">.</span><span class="n">talk_title</span><span class="si">}</span><span class="s1">» сохранён'</span><span class="p">)</span>
+    <span class="c1"># Возвращаемся на ту же страницу таблицы (с фильтрами), но только на свой сайт</span>
+    <span class="n">next_url</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'next'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url_has_allowed_host_and_scheme</span><span class="p">(</span><span class="n">next_url</span><span class="p">,</span> <span class="n">allowed_hosts</span><span class="o">=</span><span class="p">{</span><span class="n">request</span><span class="o">.</span><span class="n">get_host</span><span class="p">()}):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">next_url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'participants'</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="django-admin">Django-admin</h3>
+<p>Результат выступления администратор может ставить и в Django-admin, как требует вариант: в
+списке регистраций поле <code>result</code> редактируется прямо в таблице (<code>list_editable</code>).</p>
+<div class="highlight"><span class="filename">conferences/admin.py (фрагмент)</span><pre><span></span><code><span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Registration</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'author'</span><span class="p">,</span> <span class="s1">'conference'</span><span class="p">,</span> <span class="s1">'talk_title'</span><span class="p">,</span> <span class="s1">'created_at'</span><span class="p">,</span> <span class="s1">'result'</span><span class="p">)</span>
+    <span class="c1"># Результат выступления меняется прямо в списке</span>
+    <span class="n">list_editable</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'result'</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'result'</span><span class="p">,</span> <span class="s1">'conference'</span><span class="p">)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'talk_title'</span><span class="p">,</span> <span class="s1">'author__last_name'</span><span class="p">,</span> <span class="s1">'author__username'</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_10">Интерфейсы</h2>
+<h3 id="_11">Список конференций</h3>
+<p>Карточки конференций, по умолчанию по четыре на странице. Сверху поиск по названию и описанию,
+фильтры по тематике, городу и периоду и выбор, сколько конференций показывать (по 2, 4 или 8).</p>
+<p><img alt="Список конференций" src="../img/01_conference_list.png" /></p>
+<p>Вторая страница:</p>
+<p><img alt="Вторая страница списка" src="../img/02_conference_list_page2.png" /></p>
+<p>Фильтр «Машинное обучение» + «Предстоящие», по 2 на странице, вторая страница. Номер страницы,
+фильтры и выбор «по 2» сохраняются в адресе:</p>
+<p><img alt="Фильтрация" src="../img/03_conference_filter.png" /></p>
+<h3 id="_12">Регистрация пользователя</h3>
+<p><img alt="Регистрация" src="../img/04_signup.png" /></p>
+<h3 id="_13">Страница конференции</h3>
+<p>Описание, условия участия, место проведения с описанием, отзывы со средним рейтингом и
+форма отзыва. Справа - регистрация на выступление. Так страницу видит обычный пользователь:</p>
+<p><img alt="Конференция - пользователь" src="../img/09_conference_detail_user.png" /></p>
+<p>Так её видит администратор: есть кнопки «Удалить отзыв» и «Редактировать в админке», в меню -
+«Админ-панель».</p>
+<p><img alt="Конференция - администратор" src="../img/12_conference_detail_admin.png" /></p>
+<h3 id="_14">Регистрация на выступление</h3>
+<p>Секцию можно выбрать только из тематик этой конференции.</p>
+<p><img alt="Регистрация на выступление" src="../img/05_registration_create.png" /></p>
+<h3 id="_15">Мои выступления: изменение и удаление</h3>
+<p><img alt="Мои выступления" src="../img/06_my_registrations.png" /></p>
+<p><img alt="Изменение заявки" src="../img/07_registration_update.png" /></p>
+<p><img alt="Удаление заявки" src="../img/08_registration_delete.png" /></p>
+<p>После того как администратор поставил результат, автор видит его в своём списке:</p>
+<p><img alt="Результат выступления у автора" src="../img/15_my_registrations_result.png" /></p>
+<h3 id="_16">Таблица участников по конференциям</h3>
+<p>Для анонима и обычного пользователя результат показан значком:</p>
+<p><img alt="Участники - пользователь" src="../img/10_participants_anonymous.png" /></p>
+<p>Фильтр по результату «Рекомендован к публикации»:</p>
+<p><img alt="Участники - фильтр" src="../img/16_participants_filter.png" /></p>
+<p>Администратор меняет результат прямо в таблице и видит e-mail участников:</p>
+<p><img alt="Участники - администратор" src="../img/11_participants_admin.png" /></p>
+<h3 id="django-admin_1">Django-admin</h3>
+<p>Список регистраций с редактируемым результатом:</p>
+<p><img alt="Регистрации в админке" src="../img/13_admin_registrations.png" /></p>
+<p>Редактирование конференции:</p>
+<p><img alt="Конференция в админке" src="../img/14_admin_conference.png" /></p>
+<h2 id="_17">Проверка</h2>
+<p>Все сценарии прогнаны в браузере (headless Chromium) на PostgreSQL 16:</p>
+<ul>
+<li>на первой странице 4 конференции, на второй 3; фильтр «Машинное обучение» + «Предстоящие»
+  оставляет 3, поиск «конгресс» - одну;</li>
+<li>три пользователя зарегистрировались и вошли; заявка создаётся, изменяется и удаляется;
+  повторная регистрация на ту же конференцию открывает редактирование;</li>
+<li>чужая заявка по прямой ссылке <code>/registration/1/edit/</code> отдаёт 404;</li>
+<li>отзыв с рейтингом 11 отклоняется валидатором модели;</li>
+<li>аноним при входе на <code>/registrations/</code> перенаправляется на страницу входа;</li>
+<li>обычный пользователь не видит формы результата и кнопки удаления отзывов, администратор
+  видит; после смены результата таблица остаётся с теми же фильтрами;</li>
+<li>автор видит выставленный результат «Рекомендован к публикации».</li>
+</ul>
+<h2 id="_18">Запуск</h2>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w">    </span><span class="c1"># PostgreSQL в контейнере (docker-compose.yml)</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+python<span class="w"> </span>manage.py<span class="w"> </span>loaddata<span class="w"> </span>demo<span class="w">    </span><span class="c1"># в том числе пользователь admin</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</code></pre></div>
+<h2 id="_19">Вывод</h2>
+<p>Реализован сайт научных конференций на Django и PostgreSQL. Модель данных: пользователь,
+расширенный через <code>AbstractUser</code>, тематики, места проведения, конференции, регистрации на
+выступления и отзывы. Пользователь регистрируется, записывается на выступление, правит и
+удаляет свои заявки и оставляет отзывы с рейтингом. Администратор ставит результат выступления
+в Django-admin и прямо в таблице участников. Для максимального балла интерфейс оформлен через
+Bootstrap, у списка конференций есть пагинация, поиск и фильтры, а права администратора и
+пользователя разделены и в шаблонах, и в представлениях.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
