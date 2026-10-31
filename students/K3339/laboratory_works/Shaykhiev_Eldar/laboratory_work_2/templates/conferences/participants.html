@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Участники{% endblock %}
+{% block content %}
+<h1 class="mb-4">Участники по конференциям</h1>
+
+<form method="get" class="row g-2 mb-4">
+    <div class="col-md-4">
+        <select name="conference" class="form-select">
+            <option value="">Все конференции</option>
+            {% for conference in all_conferences %}
+                <option value="{{ conference.pk }}"{% if request.GET.conference == conference.pk|stringformat:'s' %} selected{% endif %}>{{ conference }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-3">
+        <select name="result" class="form-select">
+            <option value="">Любой результат</option>
+            {% for value, label in results %}
+                <option value="{{ value }}"{% if request.GET.result == value %} selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4">
+        <input type="search" name="q" value="{{ request.GET.q }}" class="form-control" placeholder="ФИО, организация или тема доклада">
+    </div>
+    <div class="col-md-1 d-grid">
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </div>
+</form>
+
+{% for conference in conferences %}
+    <h4 class="mt-4">
+        <a href="{% url 'conference_detail' conference.pk %}" class="text-decoration-none">{{ conference }}</a>
+        <small class="text-muted fs-6">{{ conference.start_date|date:'d.m.Y' }} – {{ conference.end_date|date:'d.m.Y' }}</small>
+    </h4>
+    <table class="table table-sm table-bordered bg-white align-middle">
+        <thead class="table-light">
+            <tr>
+                <th>#</th><th>Участник</th><th>Организация</th><th>Секция</th><th>Доклад</th><th>Результат</th>
+                {% if user.is_staff %}<th>Email</th>{% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in conference.filtered_registrations %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ registration.author }}{% if registration.author.academic_degree %}, {{ registration.author.academic_degree }}{% endif %}</td>
+                    <td>{{ registration.author.organization|default:'-' }}</td>
+                    <td>{{ registration.topic|default:'-' }}</td>
+                    <td>{{ registration.talk_title }}</td>
+                    <td>
+                        {% if user.is_staff %}
+                            {# Администратор меняет результат прямо в таблице #}
+                            <form method="post" action="{% url 'registration_result' registration.pk %}" class="d-flex gap-1">
+                                {% csrf_token %}
+                                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                                <select name="result" class="form-select form-select-sm" style="min-width: 15rem">
+                                    {% for value, label in results %}
+                                        <option value="{{ value }}"{% if registration.result == value %} selected{% endif %}>{{ label }}</option>
+                                    {% endfor %}
+                                </select>
+                                <button class="btn btn-sm btn-warning" type="submit">OK</button>
+                            </form>
+                        {% else %}
+                            {% include 'conferences/result_badge.html' %}
+                        {% endif %}
+                    </td>
+                    {% if user.is_staff %}<td>{{ registration.author.email|default:'-' }}</td>{% endif %}
+                </tr>
+            {% empty %}
+                <tr><td colspan="{% if user.is_staff %}7{% else %}6{% endif %}" class="text-muted">Нет участников</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endfor %}
+{% endblock %}

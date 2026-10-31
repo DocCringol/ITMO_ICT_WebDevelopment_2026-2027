@@ -1,0 +1,7 @@
+{% if registration.result == 'recommended' %}
+    <span class="badge text-bg-success">{{ registration.get_result_display }}</span>
+{% elif registration.result == 'rejected' %}
+    <span class="badge text-bg-danger">{{ registration.get_result_display }}</span>
+{% else %}
+    <span class="badge text-bg-secondary">{{ registration.get_result_display }}</span>
+{% endif %}

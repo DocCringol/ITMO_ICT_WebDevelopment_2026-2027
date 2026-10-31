@@ -1,0 +1,561 @@
+[
+{
+  "model": "conferences.topic",
+  "pk": 1,
+  "fields": {
+    "name": "Машинное обучение"
+  }
+},
+{
+  "model": "conferences.topic",
+  "pk": 2,
+  "fields": {
+    "name": "Базы данных"
+  }
+},
+{
+  "model": "conferences.topic",
+  "pk": 3,
+  "fields": {
+    "name": "Веб-технологии"
+  }
+},
+{
+  "model": "conferences.topic",
+  "pk": 4,
+  "fields": {
+    "name": "Информационная безопасность"
+  }
+},
+{
+  "model": "conferences.topic",
+  "pk": 5,
+  "fields": {
+    "name": "Робототехника"
+  }
+},
+{
+  "model": "conferences.topic",
+  "pk": 6,
+  "fields": {
+    "name": "Квантовые вычисления"
+  }
+},
+{
+  "model": "conferences.place",
+  "pk": 1,
+  "fields": {
+    "name": "Университет ИТМО, корпус на Кронверкском",
+    "city": "Санкт-Петербург",
+    "address": "Кронверкский пр., 49",
+    "description": "Главный корпус университета: актовый зал на 400 мест, шесть аудиторий для секций, кофе-брейк в атриуме."
+  }
+},
+{
+  "model": "conferences.place",
+  "pk": 2,
+  "fields": {
+    "name": "Экспофорум",
+    "city": "Санкт-Петербург",
+    "address": "Петербургское ш., 64/1",
+    "description": "Конгрессно-выставочный центр, пленарный зал и выставочная зона для стендов."
+  }
+},
+{
+  "model": "conferences.place",
+  "pk": 3,
+  "fields": {
+    "name": "МГУ, Шуваловский корпус",
+    "city": "Москва",
+    "address": "Ломоносовский пр., 27/4",
+    "description": "Учебный корпус МГУ, большие поточные аудитории, рядом станция метро «Университет»."
+  }
+},
+{
+  "model": "conferences.place",
+  "pk": 4,
+  "fields": {
+    "name": "Технопарк «ИТ-парк»",
+    "city": "Казань",
+    "address": "ул. Петербургская, 52",
+    "description": "ИТ-парк с конференц-залом на 300 мест и переговорными для круглых столов."
+  }
+},
+{
+  "model": "conferences.place",
+  "pk": 5,
+  "fields": {
+    "name": "Академпарк",
+    "city": "Новосибирск",
+    "address": "ул. Николаева, 12",
+    "description": "Технопарк новосибирского Академгородка, рядом институты СО РАН."
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 1,
+  "fields": {
+    "title": "Конгресс молодых учёных ИТМО",
+    "place": 1,
+    "start_date": "2027-04-06",
+    "end_date": "2027-04-09",
+    "description": "Ежегодный конгресс для студентов, аспирантов и молодых учёных. Пленарные доклады, работа по секциям, конкурс лучших докладов.",
+    "participation_terms": "Участие бесплатное. Нужно зарегистрироваться и прислать тезисы до 1 марта. Доклад - 10 минут и 5 минут на вопросы.",
+    "topics": [
+      2,
+      3,
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 2,
+  "fields": {
+    "title": "Data Science Summit",
+    "place": 2,
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-21",
+    "description": "Конференция о практическом анализе данных: от хранилищ до продакшен-моделей.",
+    "participation_terms": "Организационный взнос 3000 руб., для студентов бесплатно. Тезисы - до 1 ноября.",
+    "topics": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 3,
+  "fields": {
+    "title": "Ломоносовские чтения: информатика",
+    "place": 3,
+    "start_date": "2027-03-16",
+    "end_date": "2027-03-18",
+    "description": "Секция информатики традиционных Ломоносовских чтений.",
+    "participation_terms": "Доклады по приглашению программного комитета, заявки рассматриваются до 15 февраля.",
+    "topics": [
+      4,
+      6,
+      1
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 4,
+  "fields": {
+    "title": "Веб-разработка: практика и тренды",
+    "place": 4,
+    "start_date": "2026-09-10",
+    "end_date": "2026-09-11",
+    "description": "Доклады о фронтенде, бэкенде, архитектуре и безопасности веб-приложений.",
+    "participation_terms": "Участие бесплатное, нужна регистрация. Доклад - 20 минут.",
+    "topics": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 5,
+  "fields": {
+    "title": "Робототехника и мехатроника",
+    "place": 5,
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-04",
+    "description": "Всероссийская конференция по мобильной робототехнике, управлению и сенсорике.",
+    "participation_terms": "Взнос 1500 руб. Публикация статей в сборнике РИНЦ.",
+    "topics": [
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 6,
+  "fields": {
+    "title": "Безопасность информационных систем",
+    "place": 1,
+    "start_date": "2027-05-20",
+    "end_date": "2027-05-21",
+    "description": "Методы защиты информации, анализ уязвимостей, криптография.",
+    "participation_terms": "Тезисы до 15 апреля, объём - до 4 страниц.",
+    "topics": [
+      4
+    ]
+  }
+},
+{
+  "model": "conferences.conference",
+  "pk": 7,
+  "fields": {
+    "title": "Базы данных и большие данные",
+    "place": 3,
+    "start_date": "2026-10-01",
+    "end_date": "2026-10-02",
+    "description": "Реляционные и NoSQL СУБД, распределённые хранилища, обработка потоков.",
+    "participation_terms": "Участие бесплатное, доклад 15 минут.",
+    "topics": [
+      2
+    ]
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$abWiwCW6TqyAlsTIPSzuKY$mrQtZv1VGXu0cF6aetaGhjIuqogrZ4zbN73p9//bUlY=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Ольга",
+    "last_name": "Администратова",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "Оргкомитет",
+    "academic_degree": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RVtRjqdg7is8hAHVEnjcMn$JnmJMYGhKsluRsXfy2FxEA6Rv52zvScORMJcpoR+yt8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ivanov",
+    "first_name": "Иван",
+    "last_name": "Иванов",
+    "email": "ivanov@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "Университет ИТМО",
+    "academic_degree": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$EFpGwmDdADUsGzNxHVPOfJ$9aJIyc33ucqSEj/YaSFpeIF4giswuNNnKu9zzoAytKs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "petrov",
+    "first_name": "Пётр",
+    "last_name": "Петров",
+    "email": "petrov@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "СПбГУ",
+    "academic_degree": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$EoPC7RpZ1cH9Y57STGuwLM$eruGwrsYbz2ZLwLE7NwHpfwde5ec+/5Su+rafthYkFY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sidorova",
+    "first_name": "Анна",
+    "last_name": "Сидорова",
+    "email": "sidorova@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "МГУ имени М. В. Ломоносова",
+    "academic_degree": "кандидат физико-математических наук",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$MDtRQVfRKcaOexP5Hpm9jy$GmPdFLoXpcmKGgnYjZpbKWL5/5m7t9ZaqWBvVeWz74k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kuznetsov",
+    "first_name": "Дмитрий",
+    "last_name": "Кузнецов",
+    "email": "kuznetsov@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "Новосибирский государственный университет",
+    "academic_degree": "доктор технических наук",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6HGtZeZQEQSiOExPy2MyNl$P3CyYCAIbUWYFPFLPLARN3di56gEJD0Ej/4SaqwKij0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "smirnova",
+    "first_name": "Елена",
+    "last_name": "Смирнова",
+    "email": "smirnova@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-01T10:00:00Z",
+    "organization": "Университет ИТМО",
+    "academic_degree": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 1,
+  "fields": {
+    "author": 2,
+    "conference": 4,
+    "topic": 3,
+    "talk_title": "Серверный рендеринг страниц на Django",
+    "abstract": "Сравнение шаблонов Django и SPA по скорости первой загрузки.",
+    "created_at": "2026-08-01T12:00:00Z",
+    "result": "recommended"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 2,
+  "fields": {
+    "author": 4,
+    "conference": 4,
+    "topic": 4,
+    "talk_title": "Типичные уязвимости веб-форм",
+    "abstract": "Разбор CSRF и XSS на примерах студенческих проектов.",
+    "created_at": "2026-08-05T12:00:00Z",
+    "result": "rejected"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 3,
+  "fields": {
+    "author": 5,
+    "conference": 5,
+    "topic": 5,
+    "talk_title": "Планирование траектории манипулятора",
+    "abstract": "Алгоритм RRT* для шестиосевого манипулятора в тесном пространстве.",
+    "created_at": "2026-04-20T12:00:00Z",
+    "result": "recommended"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 4,
+  "fields": {
+    "author": 3,
+    "conference": 5,
+    "topic": 1,
+    "talk_title": "Обучение с подкреплением для мобильного робота",
+    "abstract": "Обучение политики объезда препятствий в симуляторе и перенос на реального робота.",
+    "created_at": "2026-04-25T12:00:00Z",
+    "result": "recommended"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 5,
+  "fields": {
+    "author": 4,
+    "conference": 7,
+    "topic": 2,
+    "talk_title": "Индексы для временных рядов в PostgreSQL",
+    "abstract": "BRIN и B-tree на таблицах телеметрии: размер индекса и скорость выборки.",
+    "created_at": "2026-08-20T12:00:00Z",
+    "result": "recommended"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 6,
+  "fields": {
+    "author": 2,
+    "conference": 7,
+    "topic": 2,
+    "talk_title": "Миграции схемы без простоя",
+    "abstract": "Порядок шагов при переименовании столбца в работающей базе.",
+    "created_at": "2026-08-28T12:00:00Z",
+    "result": "rejected"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 7,
+  "fields": {
+    "author": 3,
+    "conference": 2,
+    "topic": 1,
+    "talk_title": "Предсказание оттока клиентов",
+    "abstract": "Градиентный бустинг на данных телеком-оператора, интерпретация признаков.",
+    "created_at": "2026-10-10T12:00:00Z",
+    "result": "pending"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 8,
+  "fields": {
+    "author": 5,
+    "conference": 2,
+    "topic": 2,
+    "talk_title": "Колоночные хранилища для аналитики",
+    "abstract": "ClickHouse против PostgreSQL на типовых аналитических запросах.",
+    "created_at": "2026-10-15T12:00:00Z",
+    "result": "pending"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 9,
+  "fields": {
+    "author": 4,
+    "conference": 1,
+    "topic": 1,
+    "talk_title": "Нейросетевые модели для анализа текста",
+    "abstract": "Дообучение небольшой языковой модели на научных статьях.",
+    "created_at": "2026-10-01T12:00:00Z",
+    "result": "recommended"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 10,
+  "fields": {
+    "author": 3,
+    "conference": 1,
+    "topic": 3,
+    "talk_title": "Доступность веб-интерфейсов",
+    "abstract": "Проверка студенческих сайтов по WCAG и типичные ошибки.",
+    "created_at": "2026-10-20T12:00:00Z",
+    "result": "pending"
+  }
+},
+{
+  "model": "conferences.registration",
+  "pk": 11,
+  "fields": {
+    "author": 5,
+    "conference": 3,
+    "topic": 6,
+    "talk_title": "Квантовые алгоритмы оптимизации",
+    "abstract": "QAOA для задачи о максимальном разрезе на малых графах.",
+    "created_at": "2026-10-25T12:00:00Z",
+    "result": "pending"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 1,
+  "fields": {
+    "conference": 4,
+    "author": 2,
+    "conference_start": "2026-09-10",
+    "conference_end": "2026-09-11",
+    "text": "Хорошая организация, доклады строго по времени. Особенно понравилась секция про безопасность.",
+    "rating": 9,
+    "created_at": "2026-09-12T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 2,
+  "fields": {
+    "conference": 4,
+    "author": 6,
+    "conference_start": "2026-09-10",
+    "conference_end": "2026-09-11",
+    "text": "Интересные доклады, но в зале было тесно и плохо слышно задние ряды.",
+    "rating": 7,
+    "created_at": "2026-09-13T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 3,
+  "fields": {
+    "conference": 4,
+    "author": 4,
+    "conference_start": "2026-09-10",
+    "conference_end": "2026-09-11",
+    "text": "Мало времени на вопросы после докладов, обсуждение приходилось переносить в коридор.",
+    "rating": 5,
+    "created_at": "2026-09-14T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 4,
+  "fields": {
+    "conference": 5,
+    "author": 3,
+    "conference_start": "2026-06-02",
+    "conference_end": "2026-06-04",
+    "text": "Отличная выставка роботов, удобный технопарк. Хотелось бы больше практических секций.",
+    "rating": 8,
+    "created_at": "2026-06-05T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 5,
+  "fields": {
+    "conference": 5,
+    "author": 6,
+    "conference_start": "2026-06-02",
+    "conference_end": "2026-06-04",
+    "text": "Лучшая конференция в этом году: сильные доклады и живые демонстрации.",
+    "rating": 10,
+    "created_at": "2026-06-06T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 6,
+  "fields": {
+    "conference": 7,
+    "author": 4,
+    "conference_start": "2026-10-01",
+    "conference_end": "2026-10-02",
+    "text": "Глубокие доклады про PostgreSQL, много полезного для работы.",
+    "rating": 9,
+    "created_at": "2026-10-03T18:00:00Z"
+  }
+},
+{
+  "model": "conferences.review",
+  "pk": 7,
+  "fields": {
+    "conference": 7,
+    "author": 5,
+    "conference_start": "2026-10-01",
+    "conference_end": "2026-10-02",
+    "text": "Программа неплохая, но половина докладов повторяла прошлогодние.",
+    "rating": 6,
+    "created_at": "2026-10-04T18:00:00Z"
+  }
+}
+]

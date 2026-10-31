@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}Конференции{% endblock %}
+{% block content %}
+<h1 class="mb-4">Научные конференции</h1>
+
+<form method="get" class="row g-2 mb-4">
+    <div class="col-md-3">
+        <input type="search" name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Название или описание">
+    </div>
+    <div class="col-md-3">
+        <select name="topic" class="form-select">
+            <option value="">Все тематики</option>
+            {% for topic in topics %}
+                <option value="{{ topic.pk }}"{% if request.GET.topic == topic.pk|stringformat:'s' %} selected{% endif %}>{{ topic }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select name="city" class="form-select">
+            <option value="">Все города</option>
+            {% for city in cities %}
+                <option{% if request.GET.city == city %} selected{% endif %}>{{ city }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-2">
+        <select name="period" class="form-select">
+            <option value="">Все даты</option>
+            <option value="upcoming"{% if request.GET.period == 'upcoming' %} selected{% endif %}>Предстоящие</option>
+            <option value="past"{% if request.GET.period == 'past' %} selected{% endif %}>Прошедшие</option>
+        </select>
+    </div>
+    <div class="col-md-1">
+        <select name="per_page" class="form-select" title="Конференций на странице">
+            {% for n in per_page_choices %}
+                <option value="{{ n }}"{% if paginator.per_page == n %} selected{% endif %}>по {{ n }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-1 d-grid">
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </div>
+</form>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for conference in page_obj %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'conference_detail' conference.pk %}" class="text-decoration-none">{{ conference.title }}</a>
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ conference.start_date|date:'d.m.Y' }} – {{ conference.end_date|date:'d.m.Y' }}, {{ conference.place.city }}
+                    </h6>
+                    <p class="card-text">{{ conference.description|truncatewords:25 }}</p>
+                    {% for topic in conference.topics.all %}
+                        <span class="badge text-bg-secondary">{{ topic }}</span>
+                    {% endfor %}
+                </div>
+                <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                    <small class="text-muted">Докладчиков: {{ conference.participants }}</small>
+                    <a href="{% url 'conference_detail' conference.pk %}" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p class="text-muted">Ничего не найдено.</p>
+    {% endfor %}
+</div>
+
+{% if page_obj.paginator.num_pages > 1 %}
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="{% querystring page=page_obj.previous_page_number %}">&laquo;</a></li>
+            {% endif %}
+            {% for number in page_obj.paginator.page_range %}
+                <li class="page-item{% if number == page_obj.number %} active{% endif %}">
+                    {# querystring сохраняет фильтры при переходе по страницам #}
+                    <a class="page-link" href="{% querystring page=number %}">{{ number }}</a>
+                </li>
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="{% querystring page=page_obj.next_page_number %}">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}
+{% endblock %}
